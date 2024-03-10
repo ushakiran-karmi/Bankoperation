@@ -1,2 +1,2 @@
 # Bankoperation
-Bnak Operations
+Bank Operations
