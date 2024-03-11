@@ -10,6 +10,7 @@ class Bank:
         self.username=username
         self.pancard=pancard
         self.address=address
+        print("hello {self.username}your account created successfully")
 
 username=input("ENTER YOUR USERNAME:")
 pancard=input("ENTER YOUR PANCARD:")
