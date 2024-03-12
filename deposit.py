@@ -11,6 +11,7 @@ while True:
     
     if option=='1':
         amount=float(input('Enter the Deposit amount'))
-        b.deposit()
+        b.deposit(amount)
     if option=='4':
-        print("Thank you for using SBI bank for transiction")    
+        print("Thank you for using SBI bank for transiction")  
+        break  
