@@ -8,7 +8,7 @@ class Bank:
         self.username=username
         self.pancard=pancard
         self.address=address
-        self.accountbalance=15000
+        self.accountbalance=00
         print(f"{self.username} account created successfully in SBI Bank")
       
       
@@ -16,6 +16,14 @@ class Bank:
     def deposit(self,amount):
         self.accountbalance=self.accountbalance+amount
         print(f"{amount} deposite successfully")
+        
+    #creating withdraw
+    def withdraw(self,amount):
+        if amount<self.accountbalance:
+            self.accountbalance=self.accountbalance-amount
+            print(f"{amount} withdraw successfully")
+        else:
+            print("YOU HAVE INSUFFICIATE BALANCE")
         
         
 
@@ -33,8 +41,12 @@ while True:
     option=int(input(""))
     
     if option ==1:
-        amount=float(input("enter the deposit amount"))
+        amount=float(input("enter the deposit amount: "))
         b.deposit(amount)
+        
+    if option ==2:
+        amount=float(input("enter the withdraw amount:   "))
+        b.withdraw(amount)
     if option ==4:
         print("Thank for using the SBI Bank account for transiction")
         break
