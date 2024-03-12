@@ -25,6 +25,8 @@ class Bank:
         else:
             print("YOU HAVE INSUFFICIATE BALANCE")
         
+    def ministatement(self):
+        print(f"your account balance is{self.accountbalance}")    
         
 
 print(f"WELCOME TO THE {Bank.bank} {Bank.branch} ")         
@@ -38,7 +40,7 @@ b=Bank(username,pancard,address)
 while True:
     print("PLEASE SELECT ANY ABOVE OPTION")
     print("1.Deposite\n2.Withdraw\n3.Ministatement\n4.Stop")
-    option=int(input(""))
+    option=int(input("  "))
     
     if option ==1:
         amount=float(input("enter the deposit amount: "))
@@ -47,6 +49,9 @@ while True:
     if option ==2:
         amount=float(input("enter the withdraw amount:   "))
         b.withdraw(amount)
+        
+    if option ==3:
+        b.ministatement()    
     if option ==4:
         print("Thank for using the SBI Bank account for transiction")
         break
