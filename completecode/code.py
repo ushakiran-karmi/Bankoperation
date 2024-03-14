@@ -46,12 +46,14 @@ while True:
         amount=float(input("enter the deposit amount: "))
         b.deposit(amount)
         
-    if option ==2:
+    elif option ==2:
         amount=float(input("enter the withdraw amount:   "))
         b.withdraw(amount)
         
-    if option ==3:
+    elif option ==3:
         b.ministatement()    
-    if option ==4:
+    elif option ==4:
         print("Thank for using the SBI Bank account for transiction")
         break
+    else:
+        print("You entered wrong option")
